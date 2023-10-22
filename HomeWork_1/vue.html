@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Task Vue</title>
-        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    </head>
-    <body>
-        <div id="app">
-            <!-- Task 1 -->
-            <button @click="reverseText">Перевернуть</button>
-            <p>{{ buttonText }}</p>
-            <!-- Task 2 and 3 -->
-            <input v-model="newItemText" type="text">
-            <button @click="addItem">Добавить</button>
-            <ul>
-                <li v-for="item in itemList" :key="item.id"
-                    @click="removeItem(item)">{{ item.text }}</li>
-            </ul>
-        </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Task 1 -->
+      <button @click="reverseText">Перевернуть</button>
+      <p>{{ buttonText }}</p>
+      <!-- Task 2 and 3 -->
+      <input v-model="newItemText" type="text" placeholder="item">
+      <button @click="addItem">Добавить</button>
+      <ul>
+        <li v-for="item in itemList" :key="item.id"
+          @click="removeItem(item)">{{ item.text }}</li>
+      </ul>
+    </div>
 
-        <script>
+    <script>
             new Vue({
               el: '#app',
               data: {
@@ -47,5 +47,5 @@
               }
             });
           </script>
-    </body>
+  </body>
 </html>
