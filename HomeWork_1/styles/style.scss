@@ -487,7 +487,6 @@ a {
     display: flex;
     justify-content: center;
     margin-bottom: 200px;
-    background-image: url(/HomeWork_1/img/blog-photo.png);
     background-size: cover;
     height: 356px;
 
@@ -609,4 +608,183 @@ a {
     }
 }
 
-//
+//blog details
+
+.articles {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 52px;
+    margin-bottom: 96px;
+
+    &__left {
+        width: 800px;
+
+        .article {
+            margin-bottom: 20px;
+
+            &__heading {
+                color: $tittleColor;
+                font-family: DM Serif Display;
+                font-size: 50px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 125%;
+                /* 62.5px */
+                letter-spacing: 1px;
+                margin-bottom: 21px;
+            }
+
+            &__img {
+                margin-bottom: 46px;
+                border-radius: 50px;
+                width: 810px;
+            }
+
+            &__date {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 48px;
+
+                &-text {
+                    color: $textColor;
+                    font-family: Jost;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                    /* 24px */
+                    letter-spacing: 0.16px;
+                    text-transform: capitalize;
+                }
+            }
+
+            &__text {
+                color: $textColor;
+                font-family: Jost;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+                /* 33px */
+                letter-spacing: 0.22px;
+                margin-bottom: 35px;
+            }
+        }
+
+        .quotes {
+            display: flex;
+            padding: 53px 227px;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            border-radius: 50px;
+            background: #F4F0EC;
+            margin-bottom: 27px;
+
+            &-text {
+                color: $colorSiteSelect;
+                text-align: center;
+                font-family: DM Serif Display;
+                font-size: 25px;
+                font-style: italic;
+                font-weight: 400;
+                line-height: 125%;
+                /* 31.25px */
+            }
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 34px;
+            padding: 14px;
+            margin-bottom: 44px;
+
+            .list__item {
+                color: $colorSiteSelect;
+                font-family: DM Serif Display;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 125%;
+                /* 25px */
+                letter-spacing: 0.4px;
+
+                &-span {
+                    color: $textColor;
+                    font-family: Jost;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                    /* 33px */
+                    letter-spacing: 0.22px;
+                }
+            }
+        }
+
+    }
+
+    &__right {
+        width: 345px;
+
+
+        .tags {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+            position: fixed;
+            z-index: 101;
+            top: 650px;
+
+
+
+            &__heading {
+                color: $tittleColor;
+                font-family: DM Serif Display;
+                font-size: 25px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 125%;
+                /* 31.25px */
+                letter-spacing: 0.5px;
+            }
+
+            &__content {
+                display: flex;
+                width: 335px;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                gap: 11px;
+
+                &-btn {
+                    padding: 9px 30px;
+                    border: none;
+                    border-radius: 10px;
+                    background: #F4F0EC;
+                    color: $tittleColor;
+                    text-align: center;
+                    font-family: Jost;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 125%;
+                    /* 22.5px */
+                    letter-spacing: 0.36px;
+                    cursor: pointer;
+
+
+                    &:hover {
+                        background: $tittleColor;
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+    }
+}
