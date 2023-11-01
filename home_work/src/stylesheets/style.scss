@@ -1,0 +1,130 @@
+@import "vars";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.center {
+    padding-left: calc(50% - #{$widthSite / 2});
+    padding-right: calc(50% - #{$widthSite / 2});
+}
+
+
+.img {
+    width: 100%;
+}
+
+
+.content__date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .contnet__date-text {
+        color: $textColor;
+        font-family: Jost;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        /* 24px */
+        letter-spacing: 0.16px;
+        text-transform: capitalize;
+
+    }
+
+    .content__link-svg {
+        transition: all 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            scale: 1.1;
+        }
+
+        &:hover circle {
+            fill: $colorSiteSelect;
+        }
+
+        &:hover path {
+            stroke: #FFF;
+        }
+    }
+
+}
+
+// хлебные крошки
+.breadcrumb {
+
+    &-link {
+        color: $textColor;
+        font-family: Jost;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        /* 33px */
+        letter-spacing: 0.22px;
+
+        &:not(:last-child)::after {
+            content: "/";
+            padding-left: 8px;
+            padding-right: 8px;
+
+        }
+
+        &:hover {
+            color: $colorSiteSelect;
+        }
+    }
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 20px;
+
+    &__btn {
+        height: 54px;
+        width: 54px;
+        border-radius: 50%;
+        border: 1px solid $colorSiteSelect;
+        background-color: #F4F0EC;
+        ;
+        cursor: pointer;
+        color: $tittleColor;
+        font-family: Jost;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        /* 24px */
+        text-transform: capitalize;
+        transition: all 0.3s;
+
+        &:hover {
+            scale: 1.1;
+            color: #fff;
+            background-color: $colorSiteSelect;
+        }
+
+        &-svg {
+            &:hover path {
+                stroke: #fff;
+            }
+
+            &:hover circle {
+                fill: $colorSiteSelect;
+            }
+        }
+    }
+}
