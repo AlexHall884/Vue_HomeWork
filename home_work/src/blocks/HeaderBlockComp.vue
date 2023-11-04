@@ -1,5 +1,6 @@
 <template>
     <div>
+        <!-- Добавил ранее -->
         <header class="header center">
             <div class="header__left">
                 <a href="index.html" class="header__logo">
@@ -30,7 +31,7 @@ export default {
     data() {
         return {
 
-        };
+        }
     },
 
     mounted() {
@@ -39,7 +40,7 @@ export default {
 
     methods: {
 
-    },
+    }
 }
 </script>
 

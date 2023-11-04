@@ -81,7 +81,7 @@
 export default {
   name: 'BlogPageComp',
 
-  data() {
+  data () {
     return {
       contentItems: [
         {
@@ -119,9 +119,9 @@ export default {
           title: 'Interior Design',
           subtitle: 'Best For Any Office & Business Interior Solution',
           date: '26 December, 2022'
-        },
+        }
 
-      ],
+      ]
     }
   },
 
@@ -324,7 +324,6 @@ export default {
         height: 290px;
         width: 340px;
         transition: all 0.3s;
-
 
         .content__img-link {
           padding: 4px 11px 8px 5px;

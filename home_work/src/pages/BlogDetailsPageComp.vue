@@ -89,10 +89,10 @@
 export default {
   name: 'BlogDetailsPageComp',
 
-  data() {
+  data () {
     return {
       selectedTag: '',
-      tags: ["Kitchen", "Bedroom", "Building", "Architecture", "Kitchen Planning"],
+      tags: ['Kitchen', 'Bedroom', 'Building', 'Architecture', 'Kitchen Planning'],
       articles: [
         {
           id: 1,
@@ -140,12 +140,12 @@ export default {
     }
   },
   methods: {
-    selectTag(tag) {
+    selectTag (tag) {
       this.selectedTag = tag
     }
   },
   computed: {
-    filteredArticles() {
+    filteredArticles () {
       if (this.selectedTag === '') {
         return this.articles // Если тег не выбран, вернуть все статьи
       } else {
@@ -294,15 +294,11 @@ export default {
   &__right {
     width: 345px;
 
-
     .tags {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       gap: 24px;
-
-
-
 
       &__heading {
         color: $tittleColor;
@@ -337,7 +333,6 @@ export default {
           /* 22.5px */
           letter-spacing: 0.36px;
           cursor: pointer;
-
 
           &:hover {
             background: $tittleColor;

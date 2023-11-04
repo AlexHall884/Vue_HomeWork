@@ -1,25 +1,28 @@
 <template>
   <div id="app">
-    <HeaderBlockComp />
+    <!-- <HeaderBlockComp />
     <BlogDetailsPageComp />
-    <FooterBlockComp />
+    <FooterBlockComp /> -->
+    <HomeWorkProductDetails />
   </div>
 </template>
 
 <script>
-import IndexPageComp from './pages/IndexPageComp'
-import HeaderBlockComp from './blocks/HeaderBlockComp.vue'
-import FooterBlockComp from './blocks/FooterBlockComp.vue'
-import BlogPageComp from './pages/BlogPageComp.vue'
-import BlogDetailsPageComp from './pages/BlogDetailsPageComp.vue'
+import HomeWorkProductDetails from './components/ProductDetails.vue'
+// import IndexPageComp from './pages/IndexPageComp'
+// import HeaderBlockComp from './blocks/HeaderBlockComp.vue'
+// import FooterBlockComp from './blocks/FooterBlockComp.vue'
+// import BlogPageComp from './pages/BlogPageComp.vue'
+// import BlogDetailsPageComp from './pages/BlogDetailsPageComp.vue'
 export default {
   name: 'App',
   components: {
-    IndexPageComp,
-    BlogPageComp,
-    BlogDetailsPageComp,
-    HeaderBlockComp,
-    FooterBlockComp
+    // IndexPageComp,
+    // BlogPageComp,
+    // BlogDetailsPageComp,
+    // HeaderBlockComp,
+    // FooterBlockComp,
+    HomeWorkProductDetails
   }
 }
 </script>

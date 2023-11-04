@@ -1,5 +1,6 @@
 <template>
     <div>
+        <!-- Добавил ранее -->
         <footer class="footer center">
             <div class="footer__link">
                 <div class="link__heading">
@@ -41,22 +42,22 @@
 
 <script>
 export default {
-    name: 'FooterBlockComp',
+  name: 'FooterBlockComp',
 
-    data() {
-        return {
+  data () {
+    return {
 
-        };
-    },
+    }
+  },
 
-    mounted() {
+  mounted () {
 
-    },
+  },
 
-    methods: {
+  methods: {
 
-    },
-};
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -90,7 +91,6 @@ export default {
             &-img:hover {
                 scale: 1.1;
             }
-
 
         }
 

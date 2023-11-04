@@ -199,39 +199,39 @@
 <script>
 
 export default {
-    name: 'IndexPageComp',
-    components: {
+  name: 'IndexPageComp',
+  components: {
 
-    },
+  },
 
-    data() {
-        return {
-            contentItems: [
-                {
-                    image: require('../assets/content_photo1.png'),
-                    title: 'Kitchan Design',
-                    subtitle: 'Let’s Get Solution For Building Construction Work',
-                    date: '26 December, 2022'
-                },
-                {
-                    image: require('../assets/content_photo2.png'),
-                    title: 'Living Design',
-                    subtitle: 'Low Cost Latest Invented Interior Designing Ideas.',
-                    date: '26 December, 2022'
-                },
-                {
-                    image: require('../assets/content_photo3.png'),
-                    title: 'Interior Design',
-                    subtitle: 'Best For Any Office & Business Interior Solution',
-                    date: '26 December, 2022'
-                }
-            ]
+  data () {
+    return {
+      contentItems: [
+        {
+          image: require('../assets/content_photo1.png'),
+          title: 'Kitchan Design',
+          subtitle: 'Let’s Get Solution For Building Construction Work',
+          date: '26 December, 2022'
+        },
+        {
+          image: require('../assets/content_photo2.png'),
+          title: 'Living Design',
+          subtitle: 'Low Cost Latest Invented Interior Designing Ideas.',
+          date: '26 December, 2022'
+        },
+        {
+          image: require('../assets/content_photo3.png'),
+          title: 'Interior Design',
+          subtitle: 'Best For Any Office & Business Interior Solution',
+          date: '26 December, 2022'
         }
-    },
-
-    methods: {
-
+      ]
     }
+  },
+
+  methods: {
+
+  }
 }
 </script>
 
@@ -562,7 +562,6 @@ export default {
                 height: 290px;
                 width: 340px;
                 transition: all 0.3s;
-
 
                 .content__img-link {
                     padding: 4px 11px 8px 5px;
