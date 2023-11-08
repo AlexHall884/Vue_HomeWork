@@ -26,21 +26,21 @@
 
 <script>
 export default {
-    name: 'HeaderBlockComp',
+  name: 'HeaderBlockComp',
 
-    data() {
-        return {
-
-        }
-    },
-
-    mounted() {
-
-    },
-
-    methods: {
+  data () {
+    return {
 
     }
+  },
+
+  mounted () {
+
+  },
+
+  methods: {
+
+  }
 }
 </script>
 

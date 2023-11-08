@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <!-- <HeaderBlockComp />
-    <BlogDetailsPageComp />
+    <HeaderBlockComp />
+    <ProjectPageComp />
+    <!-- <BlogDetailsPageComp /> -->
     <FooterBlockComp /> -->
-    <HomeWorkProductDetails />
+    <!-- <HomeWorkProductDetails /> -->
   </div>
 </template>
 
 <script>
-import HomeWorkProductDetails from './components/ProductDetails.vue'
+// import HomeWorkProductDetails from './components/ProductDetails.vue'
 // import IndexPageComp from './pages/IndexPageComp'
-// import HeaderBlockComp from './blocks/HeaderBlockComp.vue'
-// import FooterBlockComp from './blocks/FooterBlockComp.vue'
+import HeaderBlockComp from './blocks/HeaderBlockComp.vue'
+import FooterBlockComp from './blocks/FooterBlockComp.vue'
+import ProjectPageComp from './pages/ProjectPageComp.vue'
 // import BlogPageComp from './pages/BlogPageComp.vue'
 // import BlogDetailsPageComp from './pages/BlogDetailsPageComp.vue'
 export default {
@@ -20,9 +22,10 @@ export default {
     // IndexPageComp,
     // BlogPageComp,
     // BlogDetailsPageComp,
-    // HeaderBlockComp,
-    // FooterBlockComp,
-    HomeWorkProductDetails
+    HeaderBlockComp,
+    FooterBlockComp,
+    ProjectPageComp
+    // HomeWorkProductDetails
   }
 }
 </script>
