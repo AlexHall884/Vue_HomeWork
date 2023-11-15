@@ -1,9 +1,10 @@
 <template>
   <div id="app">
     <HeaderBlockComp />
-    <ProjectPageComp />
+    <!-- <ProjectPageComp /> -->
     <!-- <BlogDetailsPageComp /> -->
-    <FooterBlockComp /> -->
+    <ProjectDetailsComp />
+    <FooterBlockComp />
     <!-- <HomeWorkProductDetails /> -->
   </div>
 </template>
@@ -13,9 +14,11 @@
 // import IndexPageComp from './pages/IndexPageComp'
 import HeaderBlockComp from './blocks/HeaderBlockComp.vue'
 import FooterBlockComp from './blocks/FooterBlockComp.vue'
-import ProjectPageComp from './pages/ProjectPageComp.vue'
+// import ProjectPageComp from './pages/ProjectPageComp.vue'
+import ProjectDetailsComp from './pages/ProjectDetailsComp.vue'
 // import BlogPageComp from './pages/BlogPageComp.vue'
 // import BlogDetailsPageComp from './pages/BlogDetailsPageComp.vue'
+
 export default {
   name: 'App',
   components: {
@@ -24,7 +27,8 @@ export default {
     // BlogDetailsPageComp,
     HeaderBlockComp,
     FooterBlockComp,
-    ProjectPageComp
+    // ProjectPageComp,
+    ProjectDetailsComp
     // HomeWorkProductDetails
   }
 }

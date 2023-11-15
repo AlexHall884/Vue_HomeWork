@@ -1,4 +1,4 @@
-# home_work
+# home-work
 
 ## Project setup
 ```

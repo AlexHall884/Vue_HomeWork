@@ -27,18 +27,18 @@
 
 <script>
 export default {
-    name: 'ProjectItemsComp',
-    props: ['item'],
+  name: 'ProjectItemsComp',
+  props: ['item'],
 
-    data() {
-        return {
+  data () {
+    return {
 
-        };
-    },
-    methods: {
+    }
+  },
+  methods: {
 
-    },
-};
+  }
+}
 </script>
 
 <style lang="scss" scoped>
