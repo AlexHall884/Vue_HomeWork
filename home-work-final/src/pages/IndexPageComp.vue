@@ -9,11 +9,15 @@
                     There are many variations of the passages of
                     lorem Ipsum fromavailable, majority.
                 </p>
-                <button class="promo__btn"> Get Started <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="18"
-                        height="17" viewBox="0 0 18 17" fill="none">
-                        <path d="M1 8.43542L14.7232 8.29857M9.61818 1.91138L16.1412 8.43436L9.48677 15.0887"
-                            stroke="#CDA274" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
-                    </svg></button>
+                <router-link to="/">
+                    <button class="promo__btn"> Get Started
+                        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"
+                            fill="none">
+                            <path d="M1 8.43542L14.7232 8.29857M9.61818 1.91138L16.1412 8.43436L9.48677 15.0887"
+                                stroke="#CDA274" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </router-link>
             </div>
             <div class="project">
                 <div class="project__heading">
@@ -33,8 +37,8 @@
                                 <h3 class="discription__left-tittle">Modern
                                     Kitchan</h3>
                                 <div class="breadcrumb">
-                                    <a href="#" class="breadcrumb-link">Decor</a>
-                                    <a href="#" class="breadcrumb-link">Artchitecture</a>
+                                    <router-link to="/" class="breadcrumb-link">Decor</router-link>
+                                    <router-link to="/" class="breadcrumb-link">Artchitecture</router-link>
                                 </div>
                             </div>
                             <div class="discription__right">
@@ -57,8 +61,8 @@
                                 <h3 class="discription__left-tittle">Modern
                                     Kitchan</h3>
                                 <div class="breadcrumb">
-                                    <a href="#" class="breadcrumb-link">Decor</a>
-                                    <a href="#" class="breadcrumb-link">Artchitecture</a>
+                                    <router-link to="/" class="breadcrumb-link">Decor</router-link>
+                                    <router-link to="/" class="breadcrumb-link">Artchitecture</router-link>
                                 </div>
                             </div>
                             <div class="discription__right">
@@ -81,8 +85,8 @@
                                 <h3 class="discription__left-tittle">Modern
                                     Kitchan</h3>
                                 <div class="breadcrumb">
-                                    <a href="#" class="breadcrumb-link">Decor</a>
-                                    <a href="#" class="breadcrumb-link">Artchitecture</a>
+                                    <router-link to="/" class="breadcrumb-link">Decor</router-link>
+                                    <router-link to="/" class="breadcrumb-link">Artchitecture</router-link>
                                 </div>
                             </div>
                             <div class="discription__right">
@@ -105,8 +109,8 @@
                                 <h3 class="discription__left-tittle">Modern
                                     Kitchan</h3>
                                 <div class="breadcrumb">
-                                    <a href="#" class="breadcrumb-link">Decor</a>
-                                    <a href="#" class="breadcrumb-link">Artchitecture</a>
+                                    <router-link to="/" class="breadcrumb-link">Decor</router-link>
+                                    <router-link to="/" class="breadcrumb-link">Artchitecture</router-link>
                                 </div>
                             </div>
                             <div class="discription__right">
@@ -173,23 +177,24 @@
             </div>
             <div class="blog__content">
                 <div class="content__item" v-for="item in contentItems" :key="item.image">
-          <div class="item__top" :style="`background-image: url(${item.image})`">
-            <a href="#" class="content__img-link">{{ item.title }}</a>
-          </div>
-          <div class="item__bottom">
-            <h3 class="contnet__tittle">{{ item.subtitle }}</h3>
-            <div class="content__date">
-              <p class="contnet__date-text">{{ item.date }}</p>
-              <a class="content__link"><svg class="content__link-svg" xmlns="http://www.w3.org/2000/svg" width="52"
-                  height="53" viewBox="0 0 52 53" fill="none">
-                  <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
-                  <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
+                    <div class="item__top" :style="`background-image: url(${item.image})`">
+                        <a href="#" class="content__img-link">{{ item.title }}</a>
+                    </div>
+                    <div class="item__bottom">
+                        <h3 class="contnet__tittle">{{ item.subtitle }}</h3>
+                        <div class="content__date">
+                            <p class="contnet__date-text">{{ item.date }}</p>
+                            <router-link to="/blog" class="content__link"><svg class="content__link-svg"
+                                    xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53"
+                                    fill="none">
+                                    <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
+                                    <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </router-link>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -199,39 +204,39 @@
 <script>
 
 export default {
-  name: 'IndexPageComp',
-  components: {
+    name: 'IndexPageComp',
+    components: {
 
-  },
+    },
 
-  data () {
-    return {
-      contentItems: [
-        {
-          image: require('../assets/content_photo1.png'),
-          title: 'Kitchan Design',
-          subtitle: 'Let’s Get Solution For Building Construction Work',
-          date: '26 December, 2022'
-        },
-        {
-          image: require('../assets/content_photo2.png'),
-          title: 'Living Design',
-          subtitle: 'Low Cost Latest Invented Interior Designing Ideas.',
-          date: '26 December, 2022'
-        },
-        {
-          image: require('../assets/content_photo3.png'),
-          title: 'Interior Design',
-          subtitle: 'Best For Any Office & Business Interior Solution',
-          date: '26 December, 2022'
+    data() {
+        return {
+            contentItems: [
+                {
+                    image: require('../assets/content_photo1.png'),
+                    title: 'Kitchan Design',
+                    subtitle: 'Let’s Get Solution For Building Construction Work',
+                    date: '26 December, 2022'
+                },
+                {
+                    image: require('../assets/content_photo2.png'),
+                    title: 'Living Design',
+                    subtitle: 'Low Cost Latest Invented Interior Designing Ideas.',
+                    date: '26 December, 2022'
+                },
+                {
+                    image: require('../assets/content_photo3.png'),
+                    title: 'Interior Design',
+                    subtitle: 'Best For Any Office & Business Interior Solution',
+                    date: '26 December, 2022'
+                }
+            ]
         }
-      ]
+    },
+
+    methods: {
+
     }
-  },
-
-  methods: {
-
-  }
 }
 </script>
 

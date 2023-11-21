@@ -24,9 +24,9 @@
             <div class="footer__pages">
                 <h3 class="pages__tittle">Pages</h3>
                 <div class="pages__menubar">
-                    <a href="#" class="pages__menubar-item">Home</a>
-                    <a href="#" class="pages__menubar-item">Projects</a>
-                    <a href="#" class="pages__menubar-item">Blog</a>
+                    <router-link class="pages__menubar-item" to="/home">Home</router-link>
+                    <router-link class="pages__menubar-item" to="/project">Projects</router-link>
+                    <router-link class="pages__menubar-item" to="/blog">Blog</router-link>
                 </div>
             </div>
             <div class="footer__contact">

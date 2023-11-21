@@ -4,8 +4,8 @@
             <div class="intro">
                 <h3 class="intro__heading">Our Project</h3>
                 <div class="breadcrumb">
-                    <a href="index.html" class="breadcrumb-link">Home</a>
-                    <a href="blog.html" class="breadcrumb-link">Project</a>
+                    <router-link to="/home" class="breadcrumb-link">Home</router-link>
+                    <router-link to="/project" class="breadcrumb-link">Project</router-link>
                 </div>
             </div>
         </div>
@@ -36,118 +36,118 @@
         </div>
     </div>
 </template>
-
+  
 <script>
 
 import ProjectItemsComp from '../components/ProjectItemsComp.vue'
 
 export default {
-  name: 'ProjectPageComp',
-  components: { ProjectItemsComp },
+    name: 'ProjectPageComp',
+    components: { ProjectItemsComp },
 
-  data () {
-    return {
-      selectTeg: 'BedroomItems',
-      category: ['BathroomItems', 'BedroomItems', 'KitchanItems', 'LivingAreaItems'],
-      BedroomItems: [
-        {
-          image: require('../assets/project_photo5.png'),
-          tittle: 'Minimal Bedroom'
-        },
-        {
-          image: require('../assets/project_photo6.png'),
-          tittle: 'Minimal Bedroom'
-        },
-        {
-          image: require('../assets/project_photo7.png'),
-          tittle: 'Classic Minimal Bedroom'
-        },
-        {
-          image: require('../assets/project_photo8.png'),
-          tittle: 'Modern Bedroom'
-        },
-        {
-          image: require('../assets/project_photo9.png'),
-          tittle: 'Minimal Bedroom table'
-        },
-        {
-          image: require('../assets/project_photo10.png'),
-          tittle: 'System Table'
-        },
-        {
-          image: require('../assets/project_photo11.png'),
-          tittle: 'Modern Medroom'
-        },
-        {
-          image: require('../assets/project_photo12.png'),
-          tittle: 'Modern Medroom'
-        }
-      ],
-      BathroomItems: [
-        {
-          image: require('../assets/project_photo1.png'),
-          tittle: 'Minimal Bathroom'
-        },
-        {
-          image: require('../assets/project_photo2.png'),
-          tittle: 'Minimal Bathroom'
-        }
-      ],
-      KitchanItems: [
-        {
-          image: require('../assets/content_photo1.png'),
-          tittle: 'Minimal Kitchan'
-        },
-        {
-          image: require('../assets/content_photo3.png'),
-          tittle: 'Minimal Kitchan'
-        },
-        {
-          image: require('../assets/content_photo4.png'),
-          tittle: 'Minimal Kitchan'
-        },
-        {
-          image: require('../assets/content_photo5.png'),
-          tittle: 'Minimal Kitchan'
-        }
-      ],
-      LivingAreaItems: [
-        {
-          image: require('../assets/project_photo3.png'),
-          tittle: 'Minimal Living Area'
-        },
-        {
-          image: require('../assets/project_photo4.png'),
-          tittle: 'Minimal Living Area'
-        }
+    data() {
+        return {
+            selectTeg: 'BedroomItems',
+            category: ['BathroomItems', 'BedroomItems', 'KitchanItems', 'LivingAreaItems'],
+            BedroomItems: [
+                {
+                    image: require('../assets/project_photo5.png'),
+                    tittle: 'Minimal Bedroom'
+                },
+                {
+                    image: require('../assets/project_photo6.png'),
+                    tittle: 'Minimal Bedroom'
+                },
+                {
+                    image: require('../assets/project_photo7.png'),
+                    tittle: 'Classic Minimal Bedroom'
+                },
+                {
+                    image: require('../assets/project_photo8.png'),
+                    tittle: 'Modern Bedroom'
+                },
+                {
+                    image: require('../assets/project_photo9.png'),
+                    tittle: 'Minimal Bedroom table'
+                },
+                {
+                    image: require('../assets/project_photo10.png'),
+                    tittle: 'System Table'
+                },
+                {
+                    image: require('../assets/project_photo11.png'),
+                    tittle: 'Modern Medroom'
+                },
+                {
+                    image: require('../assets/project_photo12.png'),
+                    tittle: 'Modern Medroom'
+                }
+            ],
+            BathroomItems: [
+                {
+                    image: require('../assets/project_photo1.png'),
+                    tittle: 'Minimal Bathroom'
+                },
+                {
+                    image: require('../assets/project_photo2.png'),
+                    tittle: 'Minimal Bathroom'
+                }
+            ],
+            KitchanItems: [
+                {
+                    image: require('../assets/content_photo1.png'),
+                    tittle: 'Minimal Kitchan'
+                },
+                {
+                    image: require('../assets/content_photo3.png'),
+                    tittle: 'Minimal Kitchan'
+                },
+                {
+                    image: require('../assets/content_photo4.png'),
+                    tittle: 'Minimal Kitchan'
+                },
+                {
+                    image: require('../assets/content_photo5.png'),
+                    tittle: 'Minimal Kitchan'
+                }
+            ],
+            LivingAreaItems: [
+                {
+                    image: require('../assets/project_photo3.png'),
+                    tittle: 'Minimal Living Area'
+                },
+                {
+                    image: require('../assets/project_photo4.png'),
+                    tittle: 'Minimal Living Area'
+                }
 
-      ]
-    }
-  },
+            ]
+        }
+    },
 
-  methods: {
-    changeTag (teg) {
-      this.selectTeg = teg
+    methods: {
+        changeTag(teg) {
+            this.selectTeg = teg
+        }
+    },
+    computed: {
+        filteredList() {
+            if (this.selectTeg === 'BathroomItems') {
+                return this.BathroomItems
+            } else if (this.selectTeg === 'BedroomItems') {
+                return this.BedroomItems
+            } else if (this.selectTeg === 'KitchanItems') {
+                return this.KitchanItems
+            } else if (this.selectTeg === 'LivingAreaItems') {
+                return this.LivingAreaItems
+            } else {
+                return []
+            }
+        }
     }
-  },
-  computed: {
-    filteredList () {
-      if (this.selectTeg === 'BathroomItems') {
-        return this.BathroomItems
-      } else if (this.selectTeg === 'BedroomItems') {
-        return this.BedroomItems
-      } else if (this.selectTeg === 'KitchanItems') {
-        return this.KitchanItems
-      } else if (this.selectTeg === 'LivingAreaItems') {
-        return this.LivingAreaItems
-      } else {
-        return []
-      }
-    }
-  }
 }
 </script>
-
+  
 <style lang="scss" scoped>
 @import "/src/stylesheets/_vars.scss";
 @import "/src/stylesheets/style.scss";
@@ -292,3 +292,4 @@ export default {
     }
 }
 </style>
+  

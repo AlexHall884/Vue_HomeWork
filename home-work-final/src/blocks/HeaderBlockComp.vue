@@ -3,7 +3,7 @@
         <!-- Добавил ранее -->
         <header class="header center">
             <div class="header__left">
-                <a href="index.html" class="header__logo">
+                <router-link to="/home" class="header__logo">
                     <svg class="header__logo-img" xmlns="http://www.w3.org/2000/svg" width="34" height="34"
                         viewBox="0 0 34 34" fill="none">
                         <path
@@ -11,13 +11,13 @@
                             fill="#CDA274" />
                     </svg>
                     Interno
-                </a>
+                </router-link>
             </div>
             <div class="header__right">
                 <div class="menubar">
-                    <a class="menubar__item" href="#">Home</a>
-                    <a class="menubar__item" href="#">Project</a>
-                    <a class="menubar__item" href="#">Blog</a>
+                    <router-link class="menubar__item" to="/home">Home</router-link>
+                    <router-link class="menubar__item" to="/project">Project</router-link>
+                    <router-link class="menubar__item" to="/blog">Blog</router-link>
                 </div>
             </div>
         </header>

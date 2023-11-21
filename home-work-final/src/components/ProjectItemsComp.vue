@@ -6,19 +6,19 @@
                 <div class="discription__left">
                     <h3 class="discription__left-tittle">{{ item.tittle }}</h3>
                     <div class="breadcrumb">
-                        <a href="#" class="breadcrumb-link">Decor</a>
-                        <a href="#" class="breadcrumb-link">Artchitecture</a>
+                        <router-link to="/" class="breadcrumb-link">Decor</router-link>
+                        <router-link to="/" class="breadcrumb-link">Artchitecture</router-link>
                     </div>
                 </div>
                 <div class="discription__right">
-                    <a href="#" class="discription__link">
+                    <router-link to="projectDetails" class="discription__link">
                         <svg class="discription__link-svg" xmlns="http://www.w3.org/2000/svg" width="70" height="70"
                             viewBox="0 0 70 70" fill="none">
                             <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
                             <path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" />
                         </svg>
-                    </a>
+                    </router-link>
                 </div>
             </div>
         </div>
